@@ -1,0 +1,11 @@
+<div>
+	<a *ngFor="let item of breadcrumb; let i = index" [routerLink]="item.url" routerLinkActive="active">
+		{{item.title | titlecase }} {{i < breadcrumb.length - 1 ? '/' : ''}}
+	</a>
+</div>
+
+<hr>
+<a *ngFor="let item of dataFromServer" [routerLink]="item.link">
+	go to {{item.title}}
+	<br>
+</a>
